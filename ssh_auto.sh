@@ -23,6 +23,7 @@ do
   acctDir=/home/$acct
   fullPath=$acctDir/.ssh/authorized_keys
   dirWarn="Warning: User account not found, skipping!"
+  sshWarn="No .ssh folder found, one will be created.."
   dirLocate="The ssh directory has been located!"
 
   if [ "$1" != "go" ]; then
@@ -44,9 +45,11 @@ do
       echo $dirLocate
 
       if [ ! -d "$acctDir/.ssh" ]; then
+        echo $sshWarn
         mkdir -p $acctDir/.ssh
         chown $acct:$acct $acctDir/.ssh
         chmod 700 $acctDir/.ssh
+        echo "Success"
       fi
 
       cp authorized_keys $fullPath
