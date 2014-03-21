@@ -17,22 +17,49 @@ echo "---------------"
 
 for acct in "${acctArray[@]}"
 do
+
   echo "Configuring $acct ..."
+
+  acctDir=/home/$acct
+  fullPath=$acctDir/.ssh/authorized_keys
+  dirWarn="Warning: User account not found, skipping!"
+  dirLocate="The ssh directory has been located!"
 
   if [ "$1" != "go" ]; then
 
-    echo "cp authorized_keys /home/$acct/.ssh/authorized_keys"
-    echo "chown $acct:$acct /home/$acct/.ssh/authorized_keys"
-    echo "chmod 600 /home/$acct/.ssh/authorized_keys"
+    if [ -d "$acctDir" ]; then
+      echo $dirLocate
+    else
+      echo $dirWarn
+    fi
+
+    echo "cp authorized_keys $fullPath"
+    echo "chown $acct:$acct $fullPath"
+    echo "chmod 600 $fullPath"
 
   else
 
-    cp authorized_keys /home/$acct/.ssh/authorized_keys
-    chown $acct:$acct /home/$acct/.ssh/authorized_keys
-    chmod 600 /home/$acct/.ssh/authorized_keys
+    if [ -d "$acctDir" ]; then
 
+      echo $dirLocate
 
+      if [ ! -d "$acctDir/.ssh" ]; then
+        mkdir -p $acctDir/.ssh
+        chown $acct:$acct $acctDir/.ssh
+        chmod 700 $acctDir/.ssh
+      fi
+
+      cp authorized_keys $fullPath
+      chown $acct:$acct $fullPath
+      chmod 600 $fullPath
+
+    else
+
+      echo $dirWarn
+
+    fi
   fi
+
   echo "$acct complete!"
   echo "---------------"
 done

@@ -17,7 +17,7 @@ It is expected that this is being run by the root user.
 ./ssh_auto.sh
 ```
 
-4) If satistied add the option `go`  
+4) If satisfied add the option `go`  
 ```
 ./ssh_auto.sh go
 ```
