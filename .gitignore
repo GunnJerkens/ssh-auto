@@ -1,6 +1,5 @@
 authorized_keys
-properties.config
+accounts_config
 .DS_Store
 error_log
-Thumbs.db
 
