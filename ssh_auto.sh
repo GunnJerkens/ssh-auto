@@ -1,12 +1,12 @@
 #! /bin/bash
 
 if [ ! -f `dirname $0`/authorized_keys ]; then
-  echo "please copy authorized_keys.sample to authorized_keys, and edit"
+  echo "Please copy authorized_keys.sample to authorized_keys, and edit"
   exit 1
 fi
 
 if [ ! -f `dirname $0`/accounts_config ]; then
-  echo "please copy accounts_config.sample to accounts_config, and edit"
+  echo "Please copy accounts_config.sample to accounts_config, and edit"
   exit 1
 fi
 
