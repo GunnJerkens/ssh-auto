@@ -22,9 +22,9 @@ do
 
   acctDir=/home/$acct
   fullPath=$acctDir/.ssh/authorized_keys
-  dirWarn="Warning: User account not found, skipping!"
+  dirWarn="Warning: user account directory not found, skipping!"
   sshWarn="No .ssh folder found, one will be created.."
-  dirLocate="The ssh directory has been located!"
+  dirLocate="The user account directory has been located!"
 
   if [ "$1" != "go" ]; then
 
