@@ -10,7 +10,7 @@ if [ ! -f `dirname $0`/accounts_config ]; then
   exit 1
 fi
 
-acctArray=( `cat "accounts_config" `)
+acctArray=( `cat "accounts_config"` )
 
 echo "Starting key migration to user accounts:"
 echo "---------------"
