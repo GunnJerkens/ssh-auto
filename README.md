@@ -21,3 +21,7 @@ It is expected that this is being run by the root user.
 ```
 ./ssh_auto.sh go
 ```
+
+### License
+
+MIT
