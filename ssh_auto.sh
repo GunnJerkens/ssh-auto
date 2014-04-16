@@ -1,16 +1,17 @@
 #! /bin/bash
 
-if [ ! -f `dirname $0`/authorized_keys ]; then
+sshAutoDir=$(dirname $0)
+if [ ! -f $sshAutoDir/authorized_keys ]; then
   echo "Please copy authorized_keys.sample to authorized_keys, and edit"
   exit 1
 fi
 
-if [ ! -f `dirname $0`/accounts_config ]; then
+if [ ! -f $sshAutoDir/accounts_config ]; then
   echo "Please copy accounts_config.sample to accounts_config, and edit"
   exit 1
 fi
 
-acctArray=( `cat "accounts_config"` )
+acctArray=( `cat "$sshAutoDir/accounts_config"` )
 
 echo "Starting key migration to user accounts:"
 echo "---------------"
