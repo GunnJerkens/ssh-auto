@@ -28,7 +28,7 @@ It is expected that this is being run by the root user.
 |      Flags     |       Arguments        |             Output           |
 | :------------: | :---------------------:| :--------------------------: |
 |       -h       | none                   | Shows the usage menu         |
-|       -m       | `test` or `go`         | Mode to run the tool in      |
+|       -m       | "test" or "go"         | Mode to run the tool in      |
 |       -K       | none                   | Clear the known_hosts        |
 
 ### License
