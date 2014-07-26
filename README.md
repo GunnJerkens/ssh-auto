@@ -28,8 +28,8 @@ It is expected that this is being run by the root user.
 |      Flags     |       Arguments        |             Output           |
 | :------------: | :---------------------:| :--------------------------: |
 |       -h       | none                   | Shows the usage menu         |
-|       -m       | 'test' OR 'go'         | Mode, either testing or live |
-|       -K       | none                   | Clear known hosts            |
+|       -m       | 'test' OR 'go'         | Mode to run the tool in      |
+|       -K       | none                   | Clear the known_hosts        |
 
 ### License
 
