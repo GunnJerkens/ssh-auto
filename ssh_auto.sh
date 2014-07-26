@@ -71,7 +71,7 @@ do
 
   if [[ $mode = "test" ]]; then
 
-    if [ -d "$acctDir" ]; then
+    if [[ -d "$acctDir" ]]; then
       echo $dirLocate
     else
       echo $dirWarn
