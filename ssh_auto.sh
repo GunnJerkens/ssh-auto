@@ -63,7 +63,7 @@ do
 
   echo "Configuring $acct ..."
 
-  acctDir=/Users/interactive03/test/$acct
+  acctDir=/home/$acct
   fullPath=$acctDir/.ssh/authorized_keys
   dirWarn="Warning: user account directory not found, skipping!"
   sshWarn="No .ssh folder found, one will be created.."
