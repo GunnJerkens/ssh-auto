@@ -14,7 +14,7 @@ OPTIONS:
 EOF
 }
 
-while getopts "h:m:K" flag
+while getopts "h m:K" flag
 do
   case $flag in
 
